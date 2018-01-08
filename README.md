@@ -55,6 +55,16 @@ is centered and at the calibrated position.
 - **reset**. When the rotation estimation is off or towards undesired
   orientation, press `reset`.
 
+## Notes about GoogleVR SDK
+I use GoogleVR SDK 1.10 to get low-drift low-latency rotation estimation. I
+can't use the latest version because they don't open API to just enable rotation
+estimation without stereo rendering for now. Please let me know if you find that
+the latest GoogleVR SDK supports that. 
+
+Currently, all GoogleVR related files are in `Assets/GoogleVR` and
+`Assets/Plugins`. Only the gameobject `RotationManager` and the script
+`Assets/Scripts/RotationManager.cs` need to be changed for updating GVR.
+   
 ## Citation
 ```
 @inproceedings{luo2017pepper,
