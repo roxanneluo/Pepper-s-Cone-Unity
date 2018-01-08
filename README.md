@@ -51,7 +51,17 @@ is centered and at the calibrated position.
 - **reset**. When the rotation estimation is off or towards undesired
   orientation, press `reset`.
 
-## Cite
+## Citation
+```
+@inproceedings{luo2017pepper,
+  title={Pepper's Cone: An Inexpensive Do-It-Yourself 3D Display},
+  author={Luo, Xuan and Lawrence, Jason and Seitz, Steven M},
+  booktitle={Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology},
+  pages={623--633},
+  year={2017},
+  organization={ACM}
+}
+```
 
 ## Contact
 If you have any questions, please email Xuan Luo at
