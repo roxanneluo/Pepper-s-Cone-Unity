@@ -562,7 +562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7661968a053a4f66bc254caf8fc9961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encodedMap: {fileID: 0}
   mapDiv: 4095
   flipTexture: 1
   power: 1
@@ -799,7 +798,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CalibOrWarp
+  m_Text: CalibOrModel
 --- !u!222 &871938807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1146,7 +1145,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Switch Model
+  m_Text: Next Model
 --- !u!222 &1258771085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1166,7 +1165,7 @@ GameObject:
   - component: {fileID: 1267498675}
   - component: {fileID: 1267498674}
   m_Layer: 5
-  m_Name: Switch
+  m_Name: Next Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1853,7 +1852,7 @@ GameObject:
   - component: {fileID: 2068421390}
   - component: {fileID: 2068421393}
   m_Layer: 5
-  m_Name: calibOrWarp
+  m_Name: CalibOrModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
