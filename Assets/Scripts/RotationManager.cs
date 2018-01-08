@@ -12,16 +12,13 @@ public class RotationManager : MonoBehaviour {
 				return 0f;
 			}
 
-			// rotate gvr rotation first to avoid Gimbal lock.
-			Quaternion rot = Quaternion.Euler(new Vector3(-90f, 0f, 0f));
-			float rotAngle =  (rot * Quaternion.Inverse(instance.initRotation) * instance.GvrRotation()).eulerAngles.z;
-			print (rotAngle);
+			float rotAngle =  -(Quaternion.Inverse(instance.initRotation) * instance.GvrRotation()).eulerAngles.z;
 			return rotAngle;
 		}
 	}
 
 	protected static RotationManager instance = null;
-	public Quaternion initRotation = Quaternion.identity;
+	protected Quaternion initRotation = Quaternion.identity;
 
 	// need some intial number of frames to kick off.
 	public int numInitFrame = 10;
@@ -38,7 +35,7 @@ public class RotationManager : MonoBehaviour {
 
 	protected Quaternion GvrRotation() {
 		//print (transform.localRotation.eulerAngles);
-		return transform.localRotation;
+		return transform.rotation;
 	}
 
 	void LateUpdate() {
