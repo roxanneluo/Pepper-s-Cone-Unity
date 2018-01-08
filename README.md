@@ -4,6 +4,8 @@ This repo contains code to display 3D objects given calibrated pre-distortion ma
   <img src="PeppersConeSmall.gif"><br><br>
 </div>
 
+![](PeppersConeSmall.gif)
+
 ## Demo
 ### Mono
 ### Stereo
