@@ -1,7 +1,8 @@
 # Pepper's Cone: An Inexpensive Do-It-Yourself 3D Display
 This repo contains code to display 3D objects given calibrated pre-distortion map. More information see our [paper][http://roxanneluo.github.io/PeppersCone.html].
-![alt text][logo]
-[logo]: PeppersConeSmall.gif ""
+<div align="center">
+  <img src="PeppersConeSmall.gif"><br><br>
+</div>
 
 ## Demo
 ### Mono
