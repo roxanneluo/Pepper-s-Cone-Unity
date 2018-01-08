@@ -6,12 +6,7 @@ using System.Collections;
  * using the precomputed warp map so that after reflection from curved surface, 
  * the image looks undistorted.
  */
-public class Warp : MonoBehaviour {
-	// encoded warp map. (the warp map: tablet's pixel position -> camera's pixel position)
-	// Because the number of pixels exceed 256, when saving as picture, I encoded the x,y pixel
-	// coordinates as RGBA channels.
-    public Texture2D encodedMap;
-	// to decode the map
+public class WarpBase : MonoBehaviour {
 	public float mapDiv = 4095; //0x3FFF;
 	// flip texture in y direction
 	public bool flipTexture = true;
@@ -21,44 +16,37 @@ public class Warp : MonoBehaviour {
 	// convert the 0-1 uv value into pixel position and then rotate
 	protected Vector3 tabletScreenScale = new Vector3 (4f, 3f,  1f);
 	protected Material material;
-	Texture2D decodedMap;
 
-    static int LOAD_TEX_COLOR_BIT_DEPTH = 8;
-    // Use this for initialization
-	protected virtual void Start () {
-        material = GetComponent<Renderer>().material;
-		ConvertRGBATexture2Map(encodedMap, mapDiv, out decodedMap);
-        material.SetTexture("MapTex", decodedMap);
-    }
+	static int LOAD_TEX_COLOR_BIT_DEPTH = 8;
 
 	protected void ConvertRGBATexture2Map(Texture2D encodedMap, float mapDiv, out Texture2D decodedMapResult) {
-        decodedMapResult = new Texture2D(encodedMap.width, encodedMap.height, TextureFormat.RGFloat, false);
-        decodedMapResult.wrapMode = TextureWrapMode.Clamp;
+		decodedMapResult = new Texture2D(encodedMap.width, encodedMap.height, TextureFormat.RGFloat, false);
+		decodedMapResult.wrapMode = TextureWrapMode.Clamp;
 
 
-        Color32[] encodedColor32 = encodedMap.GetPixels32();
-        Color[] mapColor = new Color[encodedColor32.Length];
+		Color32[] encodedColor32 = encodedMap.GetPixels32();
+		Color[] mapColor = new Color[encodedColor32.Length];
 
-        print("length = " + encodedColor32.Length);
-        Color32 ec;
-        for (int i = 0; i < mapColor.Length; ++i)
-        {
-            ec = encodedColor32[i];
-            mapColor[i].r = ((ec.r << LOAD_TEX_COLOR_BIT_DEPTH) + ec.g) / mapDiv;
+		print("length = " + encodedColor32.Length);
+		Color32 ec;
+		for (int i = 0; i < mapColor.Length; ++i)
+		{
+			ec = encodedColor32[i];
+			mapColor[i].r = ((ec.r << LOAD_TEX_COLOR_BIT_DEPTH) + ec.g) / mapDiv;
 			//!! IMPORTANT: origin of opencv image is at top left while the origin of 
 			// textures in unity is at bottom left. So map_y needs to be flipped
 			mapColor[i].g = ((ec.b << LOAD_TEX_COLOR_BIT_DEPTH) + ec.a) / mapDiv; 
 			if (flipTexture)
 				mapColor [i].g = 1 - mapColor [i].g;
-        }
-        print("done.");
+		}
+		print("done.");
 
-        decodedMapResult.SetPixels(mapColor);
-        decodedMapResult.Apply();
-    }
-	
+		decodedMapResult.SetPixels(mapColor);
+		decodedMapResult.Apply();
+	}
+
 	// Update is called once per frame
-    // LateUpdate is called after update but before rendering
+	// LateUpdate is called after update but before rendering
 	protected virtual void LateUpdate () {
 		// although the texture's rotating eulerZ degree, the uv needs to rotate -eulerZ
 		Quaternion rot = Quaternion.Euler (0, 0, -RotationManager.RotationAngle);
