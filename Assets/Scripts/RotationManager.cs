@@ -37,7 +37,7 @@ public class RotationManager : MonoBehaviour {
 	}
 
 	protected Quaternion GvrRotation() {
-		print (transform.localRotation.eulerAngles);
+		//print (transform.localRotation.eulerAngles);
 		return transform.localRotation;
 	}
 
