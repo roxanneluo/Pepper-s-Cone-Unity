@@ -12,28 +12,28 @@ public class Warp : MonoBehaviour {
 	// coordinates as RGBA channels.
     public Texture2D encodedMap;
 	// to decode the map
-    public float mapDiv = 0x3FFF;
+	public float mapDiv = 4095; //0x3FFF;
 	// flip texture in y direction
 	public bool flipTexture = true;
 	// to increase brightness. final_intensity = alpha*original_intensity^power
 	public float power = 1, alpha = 1;
 	// aspect ratio of the ipad or other tablet. When rotating the coordinate in shader, I need to first
 	// convert the 0-1 uv value into pixel position and then rotate
-	Vector3 tabletScreenScale = new Vector3 (4f, 3f,  1f);
+	protected Vector3 tabletScreenScale = new Vector3 (4f, 3f,  1f);
+	protected Material material;
+	Texture2D decodedMap;
 
     static int LOAD_TEX_COLOR_BIT_DEPTH = 8;
-    Material material;
-    Texture2D decodedMap;
     // Use this for initialization
-	void Start () {
+	protected virtual void Start () {
         material = GetComponent<Renderer>().material;
-        ConvertRGBATexture2Map(encodedMap, mapDiv);
+		ConvertRGBATexture2Map(encodedMap, mapDiv, out decodedMap);
         material.SetTexture("MapTex", decodedMap);
     }
 
-    void ConvertRGBATexture2Map(Texture2D encodedMap, float mapDiv) {
-        decodedMap = new Texture2D(encodedMap.width, encodedMap.height, TextureFormat.RGFloat, false);
-        decodedMap.wrapMode = TextureWrapMode.Clamp;
+	protected void ConvertRGBATexture2Map(Texture2D encodedMap, float mapDiv, out Texture2D decodedMapResult) {
+        decodedMapResult = new Texture2D(encodedMap.width, encodedMap.height, TextureFormat.RGFloat, false);
+        decodedMapResult.wrapMode = TextureWrapMode.Clamp;
 
 
         Color32[] encodedColor32 = encodedMap.GetPixels32();
@@ -53,13 +53,13 @@ public class Warp : MonoBehaviour {
         }
         print("done.");
 
-        decodedMap.SetPixels(mapColor);
-        decodedMap.Apply();
+        decodedMapResult.SetPixels(mapColor);
+        decodedMapResult.Apply();
     }
 	
 	// Update is called once per frame
     // LateUpdate is called after update but before rendering
-	void LateUpdate () {
+	protected virtual void LateUpdate () {
 		// although the texture's rotating eulerZ degree, the uv needs to rotate -eulerZ
 		Quaternion rot = Quaternion.Euler (0, 0, -RotationManager.RotationAngle);
 		Matrix4x4 m = Matrix4x4.Scale(new Vector3(1.0f/tabletScreenScale.x, 1.0f/tabletScreenScale.y, 1f)) 
