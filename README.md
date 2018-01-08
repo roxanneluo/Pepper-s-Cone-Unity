@@ -1,5 +1,5 @@
 # Pepper's Cone: An Inexpensive Do-It-Yourself 3D Display
-![Tiger with Pepper's Cone](https://raw.githubusercontent.com/roxanneluo/Pepper-s-Cone-Unity/master/PeppersConeSmall.gif)
+![Tiger with Pepper's Cone](https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/PeppersConeSmall.gif)
 This repo contains code to display 3D objects given calibrated distortion map. More information see our [paper](http://roxanneluo.github.io/PeppersCone.html).
 
 ## Requirement
