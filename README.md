@@ -1,7 +1,7 @@
 
 # Pepper's Cone: An Inexpensive Do-It-Yourself 3D Display
 <p align="center">
-  <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/PeppersCone.gif" alt="Tiger with Pepper's Cone"/>
+  <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/PeppersCone.gif" alt="Tiger with Pepper's Cone"/>
 </p>
 
 This repo contains code to display 3D objects given calibrated distortion map. More information see our [paper](http://roxanneluo.github.io/PeppersCone.html) and [video](https://youtu.be/W2P-suog684).
@@ -27,6 +27,10 @@ Here I'll show you how to build the cone itself. If you just want to run the dem
 ..- Or  let a **laser cutter** cut it according to the template. Nowadays there are many makerspace in the neighbourhood like [UW's Makerspace](https://comotion.uw.edu/what-we-do/makerspace/) and [Metrix Create Space](http://www.metrixcreatespace.com) where laser cutters are available and cheap to use. Note that although using laser cutter is more convenient and accurate, some laser cutter doesn't support cutting PETG sheet. **Be careful!**
 4. Tape the openning of the cone at the bottom and put a nickel for statblization during rotation. Alternatively, you can put a [sucker pad](https://www.amazon.com/Whaline-Suction-Plastic-Sucker-without/dp/B071WFNKTB/ref=sr_1_1_sspa?ie=UTF8&qid=1515392318&sr=8-1-spons&keywords=sucker+pad+office&psc=1) in the opening.
 									
+<p align="center">
+  <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/cone_template.png" alt="cone template"/>
+  <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/sucker_pad.jpg" alt="sucker pad"/>
+</p>
 ![cone template](https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/cone_template.png)
 ![sucker pad](https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/sucker_pad.jpg)
 ## <a name="demo"> </a>Demo
