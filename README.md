@@ -31,8 +31,7 @@ Here I'll show you how to build the cone itself. If you just want to run the dem
   <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/cone_template.png" alt="cone template"/>
   <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/sucker_pad.jpg" alt="sucker pad"/>
 </p>
-![cone template](https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/cone_template.png)
-![sucker pad](https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/sucker_pad.jpg)
+
 ## <a name="demo"> </a>Demo
 In the paper we described two Pepper's Cone setup:
 - a glass-free setup where the scene is only calibrated towards the center of the two eyes, see `Assets/Scenes/MonoPeppersConeMini.unity`,
