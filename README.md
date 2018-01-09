@@ -23,8 +23,8 @@ Here I'll show you how to build the cone itself. If you just want to run the dem
 1. Download the template of a [45-degree cone](https://drive.google.com/open?id=1oQdD7Qd_Vl1tgVuC9qUqwRtVh-BpPNKS). More cone templates available [here](https://drive.google.com/drive/folders/11HggZe3xQmn-K04CsQn9UBVVDNrPS_ql?usp=sharing).
 2. [Clear 0.02-inch PETG plastic sheets](https://www.tapplastics.com) or even thinner. Feel free to use other **transparent** **thin** plastic sheets.
 3. Cut the plastic sheet using the template. Cut through all red curves and cut half-way through for the blue ones. You can
-⋅⋅-  print out the template as a poster since it's much larger than A4 paper, and cut your plastic sheet manually.
-..- Or  let a **laser cutter** cut it according to the template. Nowadays there are many makerspace in the neighbourhood like [UW's Makerspace](https://comotion.uw.edu/what-we-do/makerspace/) and [Metrix Create Space](http://www.metrixcreatespace.com) where laser cutters are available and cheap to use. Note that although using laser cutter is more convenient and accurate, some laser cutter doesn't support cutting PETG sheet. **Be careful!**
+	- print out the template as a poster since it's much larger than A4 paper, and cut your plastic sheet manually.
+	- Or let a **laser cutter** cut it according to the template. Nowadays there are many makerspace in the neighbourhood like [UW's Makerspace](https://comotion.uw.edu/what-we-do/makerspace/) and [Metrix Create Space](http://www.metrixcreatespace.com) where laser cutters are available and cheap to use. Note that although using laser cutter is more convenient and accurate, some laser cutter doesn't support cutting PETG sheet. **Be careful!**
 4. Tape the openning of the cone at the bottom and put a nickel for statblization during rotation. Alternatively, you can put a [sucker pad](https://www.amazon.com/Whaline-Suction-Plastic-Sucker-without/dp/B071WFNKTB/ref=sr_1_1_sspa?ie=UTF8&qid=1515392318&sr=8-1-spons&keywords=sucker+pad+office&psc=1) in the opening.
 									
 <p align="center">
