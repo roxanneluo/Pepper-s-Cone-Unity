@@ -97,3 +97,5 @@ Currently, all GoogleVR related files are in `Assets/GoogleVR` and
 If you have any questions, please email Xuan Luo at
 <xuanluo@cs.washington.edu>.
 
+## License
+[BSD](https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/LICENSE)
