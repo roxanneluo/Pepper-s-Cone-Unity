@@ -4,7 +4,7 @@
   <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/PeppersCone.gif" alt="Tiger with Pepper's Cone"/>
 </p>
 
-This repo contains code to display 3D objects given calibrated distortion map. More information see our [paper](http://roxanneluo.github.io/PeppersCone.html) and [video](https://youtu.be/W2P-suog684).
+This repo contains [Unity](https://unity3d.com/) project to display 3D objects given calibrated distortion map. More information see our [paper](http://roxanneluo.github.io/PeppersCone.html) and [video](https://youtu.be/W2P-suog684).
 
 ## How to DIY Your Own Pepper's Cone
 1. Build a cone following the [instructions](#build_cone) below.
@@ -16,7 +16,7 @@ This repo contains code to display 3D objects given calibrated distortion map. M
 4. If you want to try the binocular version of Pepper's Cone, please prepare a
    pair of red-cyan anaglyph glasses like [this](https://www.amazon.com/50-Pairs-Glasses-Anaglyph-Cardboard/dp/B009TZRIGG/ref=sr_1_5?ie=UTF8&qid=1515391228&sr=8-5&keywords=anaglyph+glasses)
 	or [this](https://www.amazon.com/BIAL-Red-blue-Glasses-Anaglyph-game-Extra/dp/B01ANJXCU2/ref=sr_1_1_sspa?ie=UTF8&qid=1515391228&sr=8-1-spons&keywords=anaglyph+glasses&psc=1).
-5. Build and run the demo code following the [Demo](#demo) section
+5. Download [Unity](https://unity3d.com/). Build and run the demo scenes in Unity following the [Demo](#demo) section.
 
 The assembly process is also shown in the [video](https://youtu.be/W2P-suog684?t=21).
 
