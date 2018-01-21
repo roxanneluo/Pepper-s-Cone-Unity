@@ -4,7 +4,7 @@
   <img src="https://github.com/roxanneluo/Pepper-s-Cone-Unity/raw/master/doc/PeppersCone.gif" alt="Tiger with Pepper's Cone"/>
 </p>
 
-This repo contains [Unity](https://unity3d.com/) project to display 3D objects given calibrated distortion map. More information see our [paper](http://roxanneluo.github.io/PeppersCone.html) and [video](https://youtu.be/W2P-suog684).
+This repo contains the [Unity](https://unity3d.com/) project to display 3D objects given calibrated distortion map. More information see our [paper](http://roxanneluo.github.io/PeppersCone.html) and [video](https://youtu.be/W2P-suog684).
 
 ## How to DIY Your Own Pepper's Cone
 1. Build a cone following the [instructions](#build_cone) below.
