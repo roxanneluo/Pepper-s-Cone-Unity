@@ -41,8 +41,12 @@ In the paper we described two Pepper's Cone setups:
 glasses, see `Assets/Scenes/StereoPeppersConeMini.unity`. With this one you can
 see true stereo depth.
 
+To test it in the Unity Editor, open the scene, hit play and hold `ctrl` key while moving the mouse around.
+You will see how the 3D model is pre-distorted when being rotated around as in this [video](https://youtu.be/bA3ubMQyraI).
+
 Build and run the corresponding scene on the tablet, place the cone and the
 nickel at the center of the rings, and enjoy your 3D "hologram" at home :)
+(P.S. you need to use Mac to deploy onto an iOS device.)
 
 The scenes here are the minimal setup required to show 3D objects in Pepepr's Cone. To add
 your own 3D models, add your models as child gameobjects of `ModelController`
